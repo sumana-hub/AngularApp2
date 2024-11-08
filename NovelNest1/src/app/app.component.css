@@ -1,0 +1,37 @@
+
+.custom-platinum-bg {
+  background-color: #E5E4E2;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.welcome-message {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin: 1rem 0;
+  text-align: center;
+}
+
