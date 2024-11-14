@@ -1,27 +1,18 @@
-# NovelNest
+# Novel Nest Bookstore App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+**Novel Nest** is a curated online bookstore where users can explore and purchase a selection of romantic novels. This Angular-based application features a catalog of books, a wishlist for saving favorites, and a cart for seamless checkout.
 
-## Development server
+## Recent Updates
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Wishlist Feature**: Users can now add books to a wishlist for later viewing.
+- **Search Validation**: Enhanced search functionality with validation for a smoother user experience.
+- **Improved Styling**: Updated the header and welcome message with a responsive design and custom colors for a visually engaging interface.
 
-## Code scaffolding
+## Key Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **User Authentication**: Allows users to log in and register to manage their accounts.
+- **Book Catalog**: Browse a range of romantic novels, view details, and add items to the cart.
+- **Wishlist & Cart**: Save books to a wishlist or cart for convenient later purchase.
+- **Pagination**: View books by pages for easy navigation.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Happy reading!
