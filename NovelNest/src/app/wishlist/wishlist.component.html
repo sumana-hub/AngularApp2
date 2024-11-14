@@ -1,0 +1,20 @@
+<div class="wishlist-container container my-4">
+  <h2>Your Wishlist</h2>
+  <div *ngIf="wishlistItems.length > 0; else emptyWishlist">
+    <div *ngFor="let item of wishlistItems" class="wishlist-item card shadow-sm mb-3">
+      <div class="card-body">
+        <h3 class="card-title">{{ item.title }}</h3>
+        <p class="card-text">by {{ item.author }}</p>
+        <p class="card-text">Price: ${{ item.price }}</p>
+        <button class="btn btn-danger" (click)="removeFromWishlist(item)">Remove</button>
+        <button class="btn custom-btn" (click)="addToCart(item)">Add to Cart</button>
+      </div>
+    </div>
+    <h3 class="wishlist-total">Total: ${{ getWishlistTotal() }}</h3>
+    <!-- Button to add all items to the cart -->
+    <button class="btn custom-btn" (click)="addAllToCart()">Add All to Cart</button>
+  </div>
+  <ng-template #emptyWishlist>
+    <p>Your wishlist is empty.</p>
+  </ng-template>
+</div>

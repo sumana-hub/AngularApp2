@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  constructor() {}
+  constructor() { }
 
   login(username: string, password: string): boolean {
-    // Check if the username and password match
+    
     const storedUsername = localStorage.getItem('user');
-    const storedPassword = localStorage.getItem('password');  // You can store the password as well for verification
+    const storedPassword = localStorage.getItem('password');  
 
     if (storedUsername === username && storedPassword === password) {
       return true;
@@ -21,8 +21,8 @@ export class AuthService {
 
   register(username: string, password: string): boolean {
     if (username && password) {
-      localStorage.setItem('user', username); // Store the username with the 'user' key
-      localStorage.setItem('password', password); // Store the password
+      localStorage.setItem('user', username); 
+      localStorage.setItem('password', password); 
       return true;
     }
     return false;
@@ -34,7 +34,7 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem('user');
-    localStorage.removeItem('password'); // Remove the password as well
+    localStorage.removeItem('password'); 
   }
 
   getUsername(): string | null {

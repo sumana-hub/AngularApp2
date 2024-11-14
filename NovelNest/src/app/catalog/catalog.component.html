@@ -1,4 +1,17 @@
 
+<form (ngSubmit)="searchBooks()" #searchForm="ngForm" class="mb-4 w-75 d-block mx-auto">
+  <input type="text" [(ngModel)]="searchQuery" name="searchQuery" placeholder="Search by title or author" required
+    class="form-control" #searchInput="ngModel" />
+  <!-- Validation Feedback -->
+  <div *ngIf="searchInput.invalid && searchInput.touched" class="text-danger">
+    Please enter a search term.
+  </div>
+<br>
+  <button type="submit" class="btn custom-btn w-75 d-block mx-auto" [disabled]="searchForm.invalid">
+    Search
+  </button>
+</form>
+
 <div class="container my-4">
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
     <!-- Loop through books and display each item -->
@@ -10,8 +23,15 @@
           <p class="book-author card-text">by {{ book.author }}</p>
           <p class="book-price card-text">${{ book.price }}</p>
           <button class="btn custom-btn w-100" (click)="addToCart(book)">Add to Cart</button>
+          <button class="btn custom-btn w-100 mt-2" (click)="addToWishlist(book)">Add to Wishlist</button>
         </div>
       </div>
     </div>
+  </div>
+  <!-- Pagination -->
+  <div class="pagination mt-4">
+    <button class="btn custom-btn" [disabled]="currentPage === 1" (click)="goToPage(currentPage - 1)">Previous</button>
+    <span class="mx-2">Page {{ currentPage }} of {{ totalPages }}</span>
+    <button class="btn custom-btn" [disabled]="currentPage === totalPages" (click)="goToPage(currentPage + 1)">Next</button>
   </div>
 </div>

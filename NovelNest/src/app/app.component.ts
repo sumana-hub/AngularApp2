@@ -11,22 +11,22 @@ import { AuthService } from './services/auth.service';
 export class AppComponent implements OnInit {
   title = 'NovelNest';
   cartItemCount: number = 0;
-  username: string | null = null; 
+  username: string | null = null;
   welcomeMessageVisible = false;
 
   constructor(
     private cartService: CartService,
-    private authService: AuthService, 
+    private authService: AuthService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.cartService.cartItemCount$.subscribe(count => {
       this.cartItemCount = count;
     });
-    
-    this.username = this.authService.getUsername();  
-  
+
+    this.username = this.authService.getUsername();
+
     /* if (this.username) {
       setTimeout(() => {
         this.username = null;  
@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
 
   logout(): void {
     this.authService.logout();
-    this.username = null; 
-    this.router.navigate(['/login']); 
+    this.username = null;
+    this.router.navigate(['/login']);
   }
 }

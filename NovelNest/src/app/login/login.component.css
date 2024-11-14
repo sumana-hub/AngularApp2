@@ -31,14 +31,15 @@
 }
 
 .custom-btn {
-  background-color: #E5E4E2; 
-  color: #333333;
+  background-color:#694B1F;
+  color: #fff;
   border: none; 
   font-weight: bold; 
   transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 .custom-btn:hover {
-  background-color: #D4D3CF; 
+  background-color: #fff;
+  color: #694B1F;  
   transform: scale(1.05); 
 }

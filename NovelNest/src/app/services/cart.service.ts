@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Book } from '../models/book.model'; 
+import { Book } from '../models/book.model';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +29,7 @@ export class CartService {
 
   clearCart(): void {
     this.cartItems = [];
-    this.updateCartCount(); 
+    this.updateCartCount();
   }
 
   private updateCartCount(): void {

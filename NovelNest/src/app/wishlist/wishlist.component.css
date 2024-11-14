@@ -1,4 +1,3 @@
-
 .cart-container {
   padding: 2rem;
 }
@@ -17,14 +16,13 @@
 .custom-btn {
   background-color:#694B1F;
   color: #fff;
-  border: none; 
-  font-weight: bold; 
-  transition: background-color 0.3s ease, transform 0.2s ease; 
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .custom-btn:hover {
-  background-color: white;
+  background-color: #fff;
   color: #694B1F; 
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
-
